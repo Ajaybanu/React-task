@@ -1,10 +1,23 @@
 
+import 
+ {BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify}
+ from 'react-icons/bs'
 
-function Navbar() {
+function Navbar ({OpenSidebar}) {
   return (
-    <>
-    <h1>hello navbar</h1>
-    </>
+    <header className='header'>
+        <div className='menu-icon'>
+            <BsJustify className='icon' onClick={OpenSidebar}/>
+        </div>
+        <div className='header-left'>
+            <BsSearch  className='icon'/>
+        </div>
+        <div className='header-right'>
+            <BsFillBellFill className='icon'/>
+            <BsFillEnvelopeFill className='icon'/>
+            <BsPersonCircle className='icon'/>
+        </div>
+    </header>
   )
 }
 
